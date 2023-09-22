@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to DormEase</title>
+    <style>
+        /* Inline CSS styles can also be used for quick styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color:pink;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: violet;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        p {
+            font-size: 18px;
+        }
+        
+        .cta-button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .cta-button:hover {
+            background-color: #003f5c;
+        }
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/logo.png" alt="DormEase Logo" class="logo">
+        </nav>
+        <h1>DormEase</h1>
+        <p>Your hassle-free housing search solution</p>
+        <button id="scrollToHome" style="background-color: black; color: white; padding: 8px 12px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 20px;">Home</button>
+	  <a href="Rooms.html" class="cta-button">Rooms</a>
+ 	  <a href="Reviews.html" class="cta-button">Reviews</a>
+	  <a href="Learn.html" class="cta-button">Learn More</a>
+
+
+    </header>
+
+    <div id="targetSection">
+    </div>
+
+    <script>
+        const scrollButton = document.getElementById('scrollToHome');
+        const targetSection = document.getElementById('targetSection');
+
+        scrollButton.addEventListener('click', () => {
+            // Calculate the target section's position
+            const targetSectionPosition = targetSection.getBoundingClientRect().top;
+
+            // Scroll to the target section using smooth scrolling
+            window.scrollBy({
+                top: targetSectionPosition,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+    <section id="about">
+        <h2>About DormEase</h2>
+        <p>DormEase is a housing search system designed to help students find suitable accommodation for university students away from home, especially in Zamboanga City. With its user-friendly interface and innovative features, DormEase aims to provide hassle-free and efficient dormitory hunting, ensuring that students can focus on their studies without the stress of finding a place to live.</p>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <ul>
+            <li>Smart Search Bar</li>
+            <li>Detailed Listings</li>
+            <li>Owner Contact Information</li>
+            <li>Legal Transparency</li>
+        </ul>
+    </section>
+
+    <section id="cta">
+        <h2>Get Started with DormEase Today</h2>
+        <p>Find your ideal dormitory and enjoy a stress-free housing search experience.</p>
+        <a href="sign.html" class="cta-button">Sign Up Now</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 DormEase. All rights reserved.</p>
+    </footer>
+</body>
+</html>
